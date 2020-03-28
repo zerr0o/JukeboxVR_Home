@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
     StringBuilder sb = new StringBuilder();
     ArrayList btnsName = new ArrayList();
 
-    private GameObject enter;
+    private GameObject enter = null;
 
     void Awake()
     {
@@ -73,12 +73,20 @@ public class InputManager : MonoBehaviour
         foreach (string btnName in btnsName)
         {
             GameObject btnObj = GameObject.Find(btnName);
-            Button btn = btnObj.GetComponent<Button>();
-            btn.onClick.AddListener(delegate() { OnClick(btnObj); });
+            if ( btnObj )
+            {
+                Button btn = btnObj.GetComponent<Button>();
+                btn.onClick.AddListener(delegate () { OnClick(btnObj); });
+            }
+            
         }
-
+        
         enter = GameObject.Find("Enter");
-        enter.SetActive(sb.Length > 0);
+        if ( enter )
+        {
+            enter.SetActive(sb.Length > 0);
+        }
+        
     }
 
     void OnClick(GameObject btnObj)

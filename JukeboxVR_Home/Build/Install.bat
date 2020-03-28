@@ -1,1 +1,1 @@
-adb install JukeboxVR_Home.apk
+adb install -r JukeboxVR_Home.apk

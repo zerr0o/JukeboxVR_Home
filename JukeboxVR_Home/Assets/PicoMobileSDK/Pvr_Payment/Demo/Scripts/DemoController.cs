@@ -26,8 +26,8 @@ public class DemoController : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log(loading.name);
-        Debug.Log(BG.name);
+        //Debug.Log(loading.name);
+        //Debug.Log(BG.name);
         showLoading += StopLoading;
         InputManager.doEnter += DoPayByCode;
         currentOrderID = "";
@@ -39,7 +39,8 @@ public class DemoController : MonoBehaviour
         callback = new Callback();
 
         picoVrManager = GameObject.Find("Pvr_UnitySDK").GetComponent<Pvr_UnitySDKManager>();
-        InputPanel.SetActive(false);
+        if (InputPanel)
+            InputPanel.SetActive(false);
 
     }
 
@@ -80,8 +81,12 @@ public class DemoController : MonoBehaviour
         foreach (string btnName in btnsName)
         {
             GameObject btnObj = GameObject.Find(btnName);
-            Button btn = btnObj.GetComponent<Button>();
-            btn.onClick.AddListener(delegate () { OnClick(btnObj); });
+            if ( btnObj )
+            {
+                Button btn = btnObj.GetComponent<Button>();
+                btn.onClick.AddListener(delegate () { OnClick(btnObj); });
+            }
+            
         }
     }
 
