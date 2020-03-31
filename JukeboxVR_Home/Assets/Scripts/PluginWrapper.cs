@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class FromService
 {
-    public string[] commands = null;
+    public string command = "";
     public int duration;
     public bool test;
     
@@ -18,8 +18,7 @@ public class ToService
 {
     public int timeremaining = 0;
     public string nameOfApp = "appplicationname";
-
-
+    public bool readyToStart = false;
 }
 
 public class PluginWrapper : MonoBehaviour
@@ -67,8 +66,14 @@ public class PluginWrapper : MonoBehaviour
         //string externalConfigurationRaw = javaClass.GetStatic<string>("text");
         //Debug.LogError("externalConfigurationRaw = " + externalConfigurationRaw);
         Debug.LogError("message received : " + message);
-        FromService myObject = JsonUtility.FromJson<FromService>(message);
-        SendMessageToService();
+        FromService msg = JsonUtility.FromJson<FromService>(message);
+        
+        if ( msg.command == "CMD_LOAD_SESSION" )
+        {
+            sendReady();
+        }
+
+        
         //foreach ( string command in myObject.commands )
         //{
         //    Debug.LogError(command);
@@ -79,18 +84,23 @@ public class PluginWrapper : MonoBehaviour
 
     }
 
-
-    public void SendMessageToService()
+    public void sendReady()
     {
-        Debug.LogError("trying to sendmessage back");
-        string json = JsonUtility.ToJson(new ToService());
-        javaClass.Call("LogNativeLogcatMessage");
+        ToService msgToService = new ToService();
+        msgToService.readyToStart = true;
+        SendMessageToService(msgToService);
+    }
+
+
+    public void SendMessageToService(ToService msgToService)
+    {
+        Debug.LogError("sendmessage back");
+        msgToService.nameOfApp = Application.productName.ToString();
+        string jsonMsg = JsonUtility.ToJson(msgToService);
         AndroidJavaClass androidJC = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject activity = androidJC.GetStatic<AndroidJavaObject>("currentActivity");
-        //javaClass.Call("sendIntent", json.ToString() , activity);
-        javaClass.Call("sendIntent", new object[] { json.ToString(), activity });
+        javaClass.Call("sendIntent", new object[] { jsonMsg.ToString(), activity });
         
-
     }
 
 
