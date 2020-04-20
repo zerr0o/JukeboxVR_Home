@@ -1,0 +1,1 @@
+adb install -r JukeboxVR_VideoPlayerSigned.apk
