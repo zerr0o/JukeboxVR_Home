@@ -31,11 +31,11 @@ public class ToService
 /// </summary>
 public class constant
 {
-    public const string CMD_LOAD_SESSION = "CMD_LOAD_SESSION";
-    public const string CMD_STOP_SESSION = "CMD_STOP_SESSION";
-    public const string CMD_START_SESSION = "CMD_START_SESSION";
-    public const string CMD_CHECK_FILES = "CMD_CHECK_FILES";
-    public const string CMD_COMMAND_SESSION = "CMD_COMMAND_SESSION";
+    public static string CMD_LOAD_SESSION = "CMD_LOAD_SESSION";
+    public static string CMD_STOP_SESSION = "CMD_STOP_SESSION";
+    public static string CMD_START_SESSION = "CMD_START_SESSION";
+    public static string CMD_CHECK_FILES = "CMD_CHECK_FILES";
+    public static string CMD_COMMAND_SESSION = "CMD_COMMAND_SESSION";
 }
 
 /// <summary>
@@ -69,9 +69,7 @@ public class PluginWrapper : MonoBehaviour
         javaClass = new AndroidJavaObject("com.JukeboxVR.broadcastunity.BroadCastUnityClass");
         Debug.LogError("JAVACLASS = " + javaClass.ToString());
         javaClass.CallStatic("createInstance");
-        sendReady();
 #endif
-
     }
 
     // Update is called once per frame
@@ -87,24 +85,22 @@ public class PluginWrapper : MonoBehaviour
     {
         Debug.LogError("message received : " + message);
         FromService msg = JsonUtility.FromJson<FromService>(message);
-
-        switch(msg.command)
-            {
-            case constant.CMD_LOAD_SESSION:
-                onReady.Invoke(msg.parameters);
-                break;
-            case constant.CMD_START_SESSION:
-                onStart.Invoke();
-                break;
-            case constant.CMD_STOP_SESSION:
-                onStop.Invoke();
-                break;
-            case constant.CMD_COMMAND_SESSION:
-                onCommand.Invoke(msg.parameters);
-                break;
-            default:
-                break;
-
+        if (msg.command == constant.CMD_LOAD_SESSION)
+        {
+            sendReady();
+            onReady.Invoke(msg.parameters);
+        }
+        else if (msg.command == constant.CMD_START_SESSION)
+        {
+            onStart.Invoke();
+        }
+        else if (msg.command == constant.CMD_STOP_SESSION)
+        {
+            onStop.Invoke();
+        }
+        else if ( msg.command == constant.CMD_COMMAND_SESSION )
+        {
+            onCommand.Invoke(msg.parameters);
         }
 
 

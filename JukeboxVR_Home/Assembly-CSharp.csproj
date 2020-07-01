@@ -52,9 +52,6 @@
     <UnityVersion>2018.4.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2018.4.19f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -133,19 +130,19 @@
     <None Include="Assets\PicoMobileSDK\Pvr_UnitySDK\Resources\FillColor.shader" />
     <None Include="Assets\PicoMobileSDK\Pvr_UnitySDK\Resources\Undistortion.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Documents/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/devst/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Documents/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/devst/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Documents/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/devst/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Documents/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/devst/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/Documents/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/devst/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.19f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -346,10 +343,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.19f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
-      <HintPath>D:/Documents/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Assets/Plugins/LitJson.dll</HintPath>
+      <HintPath>C:/Users/devst/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Assets/Plugins/LitJson.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/Documents/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/devst/Documents/GitHub/JukeboxVR_Home/JukeboxVR_Home/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.19f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

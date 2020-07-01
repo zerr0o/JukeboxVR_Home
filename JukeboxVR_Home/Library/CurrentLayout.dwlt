@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1920
+    x: 0
     y: 43
     width: 1920
     height: 997
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 120
+  controlID: 110
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 14
+  controlID: 111
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 15
+  controlID: 112
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -378,7 +378,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1920
+    x: 0
     y: 639
     width: 1257
     height: 361
@@ -395,20 +395,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Plugins/Android
+    - Assets/Icon
   m_ViewMode: 1
   m_StartGridSize: 72
   m_LastFolders:
-  - Assets/Plugins/Android
+  - Assets/Icon
   m_LastFoldersGridSize: 72
-  m_LastProjectPath: D:\Documents\Documents\GitHub\JukeboxVR_Home\JukeboxVR_Home
+  m_LastProjectPath: C:\Users\devst\Documents\GitHub\JukeboxVR_Home\JukeboxVR_Home
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fa270000
-    m_LastClickedID: 10234
-    m_ExpandedIDs: 00000000f026000062270000fa2700008c2800003a2a0000542a000000ca9a3b
+    m_SelectedIDs: 30270000
+    m_LastClickedID: 10032
+    m_ExpandedIDs: 00000000f026000062270000fa2700008e2800005a2a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -436,7 +436,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 0e7b0000
     m_LastClickedID: 31502
-    m_ExpandedIDs: 00000000f026000062270000fa2700008c2800003a2a0000542a0000
+    m_ExpandedIDs: 00000000f026000062270000fa2700008e280000402a00005a2a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -512,7 +512,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3179
+    x: 1259
     y: 73
     width: 659
     height: 927
@@ -547,7 +547,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1920
+    x: 0
     y: 73
     width: 234
     height: 546
@@ -557,7 +557,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 0ef9ffff78f9ffff9cf9ffff14fbffffdefbffff
+      m_ExpandedIDs: defbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -602,7 +602,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2156
+    x: 236
     y: 73
     width: 1019
     height: 546
@@ -613,9 +613,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.737253, y: -59.56751, z: -302.10733}
+    m_Target: {x: -3.920125, y: -56.628845, z: -310.43555}
     speed: 2
-    m_Value: {x: -5.737253, y: -59.56751, z: -302.10733}
+    m_Value: {x: -3.920125, y: -56.628845, z: -310.43555}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -643,13 +643,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.10645326, y: -0.4319156, z: 0.05142273, w: -0.89413214}
+    m_Target: {x: 0.06568873, y: 0.08908469, z: -0.0058881408, w: 0.99383813}
     speed: 2
-    m_Value: {x: -0.10645326, y: -0.4319156, z: 0.05142273, w: -0.89413214}
+    m_Value: {x: 0.06568873, y: 0.08908469, z: -0.0058881408, w: 0.99383813}
   m_Size:
-    m_Target: 32.365967
+    m_Target: 12.414632
     speed: 2
-    m_Value: 32.365967
+    m_Value: 12.414632
   m_Ortho:
     m_Target: 0
     speed: 2
